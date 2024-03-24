@@ -1,0 +1,120 @@
+body{
+    background: #817DFF; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.card-img {
+    transition: 0.6s;
+}
+
+.col-md-4:hover .card-img {
+    filter: blur(2px);
+}
+
+.card-title, .card-text {
+    display: none;
+}
+
+.col-md-4:hover .card-title{
+    color: white;
+    display: block;
+}
+
+.col-md-4:hover .card-text{
+    color: white;
+    display: block;
+}
+
+.card-img-overlay {
+    transition: 0.6s;
+}
+
+.col-md-4:hover .card-img-overlay{
+    margin: 2rem;
+    background: linear-gradient(to right, #808080, #3fada8); 
+}
+
+.img-project {
+    min-width: 356px; 
+    max-width: 769px; 
+    height: 341px;
+}
+
+.box-1 {
+    position: relative;
+    background-color: rgba(209, 194, 194, 0.308);
+    max-width: 435px;
+    height: 273px;
+}
+
+.box-2 {
+    position: relative;
+    left: 25px;
+    top: 25px;
+    background-color: rgba(209, 194, 194, 0.623);
+    height: inherit;
+}
+
+.box-3 {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    background-color: rgba(209, 194, 194, 0.911);
+    height: inherit;
+}
+
+.box-4 {
+    margin-top: 3em;
+    position: relative;
+    background-color: rgba(209, 194, 194, 0.308);
+    max-width: 435px;
+    height: 273px;
+}
+
+.box-5 {
+    position: relative;
+    left: -25px;
+    top: -25px;
+    background-color: rgba(209, 194, 194, 0.623);
+    height: inherit;
+}
+
+.box-6 {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    background-color: rgba(209, 194, 194, 0.911);
+    height: inherit;
+}
+
+.list-group-item {
+    color: white;
+    background: transparent;
+}
+
+.section {
+    scroll-snap-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.text-bg-tosca{
+    background-color: #3fada8;
+}
+
+.text-bg-primary {
+    background-color: #817DFF !important;
+}
