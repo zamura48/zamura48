@@ -75,8 +75,8 @@ let dataJobs = [
 ];
 
 $(document).ready(function () {
-    showData('#listJobExperience');
-    showData('#listProject');
+    showData('#listJobExperience', dataJobs);
+    showData('#listProject', dataProject);
     checkSizeWindow();
 });
 
@@ -86,9 +86,9 @@ function checkSizeWindow() {
     }
 }
 
-function showData(param) {
+function showData(param, data) {
     let html = '';
-    $.each(dataProject, function (indexInArray, valueOfElement) { 
+    $.each(data, function (indexInArray, valueOfElement) { 
         let tag = '';
         let image = 'assets/img/No-Image.png';
         let sourceCode = '';
