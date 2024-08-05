@@ -1,52 +1,10 @@
 let dataProject = [
     {
-        'image': '',
-        'title': 'EKEP - IIK Strada Indonesia ()',
-        'decsription': ``,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
-        'image': '',
-        'title': 'SPMI - IIK Strada Indonesia ()',
-        'decsription': ``,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
-        'image': '',
-        'title': 'E-Sign - IIK Strada Indonesia ()',
-        'decsription': ``,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
-        'image': '',
-        'title': 'E-letter - IIK Strada Indonesia ()',
-        'decsription': ``,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
-        'image': '',
-        'title': 'Go-RFQ (Agustus 2023 - December 2023)',
-        'decsription': `Aplikasi ini dibuat untuk membantu sales dalam membuat quotation(penawaran), pada aplikasi ini saya membantu sebagai pengembangan website. framework yang di gunakan codeigniter 3`,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
-        'image': '',
-        'title': 'Simpelcak (July 2023)',
-        'decsription': `Aplikasi ini dibuat untuk membantu peserta pelatihan dalam mengikuti pelatihan yang telah disediakan oleh Instansi BLK Surabaya, pada aplikasi ini saya membantu sebagai pengembangan website. framework yang di gunakan codeigniter 3`,
-        'link': '',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'tim'],
-    },
-    {
         'image': 'assets/img/portfolio/lapanganku.png',
         'title': 'Lapanganku (Maret 2023 - Mei 2023)',
         'decsription': `Proyek ini berbasis website yang dibuat dengan framework Codeigniter 4. Proyek ini dibuat untuk membantu pelanggan dalam melakukan pemesanan lapangan bulu tangkis.`,
         'link': 'https://github.com/zamura48/sewa-lapangan',
-        'tag': ['codeigniter', 'bootstrap', 'jquery', 'midtrans', 'individu'],
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'midtrans', 'individu'],
     },
     {
         'image': 'assets/img/portfolio/mediabelship.png',
@@ -78,8 +36,47 @@ let dataProject = [
     },
 ];
 
+let dataJobs = [
+    {
+        'image': 'assets/img/portfolio/mamocare.png',
+        'title': 'Mamocare (July 2024 - Sekarang)',
+        'decsription': `Aplikasi ini dibuat agar ibu hamil dapat mengontrol perkembangan kehamilan dan menjaga kesehatan dari ibu hamil. Pada aplikasi ini saya berperan sebagai pengembang web dan menyediakan API untuk aplikasi android.`,
+        'link': 'https://mamocare.id/',
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'tim'],
+    },
+    {
+        'image': 'assets/img/portfolio/ekep.png',
+        'title': 'EKEP - IIK Strada Indonesia (April 2024 - Sekarang)',
+        'decsription': `Aplikasi ini dibuat agar mahasiswa atau dosen yang ingin melakukan uji etik, dapat dilakukan secara online dengan penguji dari IIK Strada Indonesia. Pada aplikasi ini saya berperan sebagai pengembang web.`,
+        'link': 'https://ekep.strada.ac.id/',
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'tim'],
+    },
+    {
+        'image': '',
+        'title': 'E-Sign - IIK Strada Indonesia (Desember 2023 - Januari 2024)',
+        'decsription': `Aplikasi ini dibuat untuk tanda tangan digital. Pada aplikasi ini saya berperan sebagai pengembang web`,
+        'link': '',
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'tim'],
+    },
+    {
+        'image': '',
+        'title': 'E-letter - IIK Strada Indonesia (Desember 2023 - Februari 2024)',
+        'decsription': `Aplikasi ini dirancang khusus untuk membantu staff dalam mengelola surat masuk dan keluar dengan lebih efisien. Aplikasi ini memungkinkan pengguna untuk merekap semua surat yang diterima dan dikirim dengan mudah. Tidak perlu lagi mencatat secara manual atau mencari-cari di tumpukan berkas, karena semuanya bisa dilakukan dengan beberapa klik saja. Aplikasi ini memastikan bahwa setiap surat tercatat dengan baik, sehingga memudahkan pencarian dan pelaporan. Pada aplikasi ini saya berperan sebagai pengembang web`,
+        'link': '',
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'tim'],
+    },
+    {
+        'image': '',
+        'title': 'Go-RFQ (Agustus 2023 - Desember 2023)',
+        'decsription': `Aplikasi ini dibuat untuk membantu sales dalam membuat quotation(penawaran), pada aplikasi ini saya membantu sebagai pengembangan website. framework yang di gunakan codeigniter 3`,
+        'link': '',
+        'tag': ['codeigniter 3', 'bootstrap', 'jquery', 'tim'],
+    },
+];
+
 $(document).ready(function () {
-    showData()
+    showData('#listJobExperience');
+    showData('#listProject');
     checkSizeWindow();
 });
 
@@ -89,7 +86,7 @@ function checkSizeWindow() {
     }
 }
 
-function showData() {
+function showData(param) {
     let html = '';
     $.each(dataProject, function (indexInArray, valueOfElement) { 
         let tag = '';
@@ -131,5 +128,5 @@ function showData() {
                 </div>`;
     });
 
-    $("#listProject").html(html);
+    $(param).html(html);
 }
