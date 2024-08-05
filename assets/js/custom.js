@@ -98,7 +98,7 @@ function showData(param, data) {
         }
 
         if (valueOfElement.link) {
-            sourceCode = `<a href="${valueOfElement.link}" target="_blank" style="text-decoration: none;">Source Code</a>`;
+            sourceCode = `<a href="${valueOfElement.link}" target="_blank" style="text-decoration: none;">Link</a>`;
         }
 
         $.each(valueOfElement.tag, function (ind, val) { 
